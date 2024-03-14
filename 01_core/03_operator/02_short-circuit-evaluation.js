@@ -28,7 +28,9 @@ if(num % 2 == 0) {
     console.log('홀수');
 }
 
-console.log(num % 2 == 0 && console.log('짝수'));     // 홀수
+console.log("=====================")
+
+num % 2 == 0 && console.log('짝수');     // false 라서 아예 안나옴 
 num % 2 == 0 || console.log('홀수');                  // 홀수
 
 // 객체를 가리키기를 기대하는 변수가 null 또는 undefined가 아닌지 확인하고
