@@ -18,6 +18,33 @@
         <li>우유</li>
     </ul>
 
+    <script>
+        const $drink = document.getElementById('drink');
+        
+        // 이벤트 위임 - 클릭 된 하위 li 요소의 color 변경
+        $drink.addEventListener('click', e => {
+            if(e.target.matches('li'))
+                e.target.style.color = 'red';
+        });
+
+        // 첫번째 li를 대상으로 color 변경
+        // querySelector는 첫번째 요소만 선택해 오는 애임
+
+        /*  querySelectorAll을 쓸 경우 유사 배열 객체를 반환한다. 
+            querySelectorAll는 노드 리스트를 반환한다.  
+            얘네는 배열처럼 생겼지만 배열이 아니라서 forEach문을 사용해야한다. */ 
+
+        // document.querySelectorAll('li').addEventListener('click', e => {
+        //     e.stopPropagation
+        //     e.target.style.color = 'blue';
+        // });
+
+        document.querySelector('li').addEventListener('click', e => {
+            e.stopPropagation
+            e.target.style.color = 'blue';
+        });
+    </script>
+
    
 
 </body>

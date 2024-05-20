@@ -30,6 +30,23 @@
         <li>우유</li>
     </ul>
 
+    <script>
+        const $drink = document.getElementById('drink');
+
+        $drink.addEventListener('click', e => {
+
+            /*  ul 영역 클릭 시
+                2 : 타깃 단계, e.타깃도 현재 타깃도 ul로 출력
+                li 영역을 클릭시
+                3 : 버블링 단계(li -> ul), 타깃은 li, 현재 타깃은 ul로 출력 */
+            console.log(e.eventPhase);
+            console.log(e.target);
+            console.log(e.currentTarget);
+        });
+
+
+    </script>
+
    
 
     <pre>
@@ -42,6 +59,24 @@
         <li>된장찌개</li>
         <li>고등어구이</li>
     </ul>
+
+    <script>
+        const $food = document.getElementById('food');
+
+        // 캡쳐링 단계 캐치
+        $food.addEventListener('click', e => {
+            console.log(e.eventPhase);
+            console.log(e.target);
+            console.log(e.currentTarget);
+        }, true)
+
+        // 버블링 단계 캐치
+        $food.addEventListener('click',e => {
+            console.log(e.eventPhase);
+            console.log(e.target);
+            console.log(e.currentTarget);
+        })
+    </script>
 
     
 

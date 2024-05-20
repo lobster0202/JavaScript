@@ -16,6 +16,24 @@
     </pre>
     <div style="color: white;">AREA</div>
 
+    <!-- tag -> id -> class -> inline -> !important 순서  -->
+
+    <script>
+        const $area = document.querySelector('div');
+
+        console.log($area.style);
+
+        $area.style.width = '100px';
+        $area.style.height = '100px';
+
+        // 카멜케이스로 접근 
+        $area.style.backgroundColor = 'lightgray';  // 마침표 표기법
+        
+        // 케밥케이스로 접근
+        $area.style['background-color'] = 'red';    // 대괄호 표기법
+
+    </script>
+
    
 </body>
 </html>

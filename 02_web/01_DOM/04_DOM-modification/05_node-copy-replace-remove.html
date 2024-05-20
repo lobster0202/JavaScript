@@ -21,19 +21,44 @@
         ul 영역
         <li>li 영역</li>
     </ul>
+    <script>
+        const $ul = document.querySelector(".copy");
+
+        // 요소 노드만 반환하는거라서 텍스트 영역인 ul은 가져오지 않음
+        const $li = $ul.firstElementChild;
+
+        // li 얕은 복사 : 텍스트 노드 없는 사본
+        const $shallowClone = $li.cloneNode(false);
+
+        // $li 깊은 복사 : li, 텍스트 노드가 있는 사본
+        const $deepClone = $li.cloneNode(true);
+
+        $ul.appendChild($shallowClone);
+        $ul.appendChild($deepClone)
+    </script>
 
    
     <h3>노드 교체</h3>
     <pre>
     Node.prototype.replaceChild(newChild, oldChild) 메서드는 자신을 호출한 노드의 자식 노드인 
-    oldChild 노드를 newChild 노드로 교체한다. 이때 oldChild는 replaceChild 메서드를 호출한 노드의
-    자식 노드여야하고 oldChild 노드는 DOM에서 제거된다.
+    oldChild 노드를 newChild 노드로 교체한다. 
+    이때 oldChild는 replaceChild 메서드를 호출한 노드의 자식 노드여야하고 oldChild 노드는 DOM에서 제거된다.
     </pre>
     
     <ul id="drink">
         <li>커피</li>
         <li>사이다</li>
     </ul>
+
+    <script>
+        const $drink = document.getElementById('drink');
+        const $coffee = $drink.firstElementChild;
+
+        const $newChild = document.createElement('li');
+        $newChild.textContent = '콜라';
+
+        $drink.replaceChild($newChild, $coffee)
+    </script>
 
     
 
@@ -47,6 +72,12 @@
         <li>파스타</li>
         <li>피자</li>
     </ul>
+
+    <script>
+        const $food = document.getElementById('food');
+
+        $food.removeChild($food.lastElementChild);
+    </script>
 
   
 </body>

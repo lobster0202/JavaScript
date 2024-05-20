@@ -31,6 +31,39 @@
     
     <div class='area'></div>
 
+    <script>
+        const $area = document.querySelector('.area');
+
+        console.log($area.className);       // 문자열 반환
+        console.log($area.classList);       // DOMTokenList 객체 반환
+
+        // 위에 보면 circle하고 lightgray에 대해서 정의가 나와있음 인덱스도 있음
+        //  class attribute 값 추가 및 제거
+        $area.classList.add('circle');      
+        $area.classList.add('lightgray');
+
+        // $area.classList.remove('lightgray');
+
+        // item(index) : 인덱스에 해당하는 클래스를 class attribute에서 반환
+        console.log($area.classList.item(0));
+        console.log($area.classList.item(2));
+
+        // 포함하고 있는지 아닌지 boolean값으로 나타내줌
+        console.log($area.classList.contains('lightgray'));
+        console.log($area.classList.contains('yellow'));
+
+        // replace(oldClassName, newClassName) : 첫 번째 인수로 전달한 문자열을 두번째 인수로 변경(class attribute)
+        $area.classList.replace('lightgray', 'yellow');
+
+        // toggle(className) : class attribute에 인수로 전달한 문자열과 일치하는 클래스가 존재하면 제거, 존재하지 않으면 추가
+        // 버튼 색깔을 바꿀때, 모달창을 닫을때 쓴다.
+        // 한마디로 클릭했을 때 닫고 클랙했을 때 열고 의 기능을 넣어 줄 때 씀!
+        $area.classList.toggle('circle');       // 제거
+        $area.classList.toggle('circle');       // 추가
+        $area.classList.toggle('circle');       // 제거
+
+    </script>
+
    
 </body>
 </html>

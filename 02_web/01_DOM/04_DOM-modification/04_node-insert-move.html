@@ -19,6 +19,20 @@
     <ul id="drink">
         <li>커피</li>
     </ul>
+    <script>
+        const $drink = document.getElementById('drink');
+        const $li1 = document.createElement('li');
+        $li1.textContent = '콜라';
+
+        $drink.appendChild($li1);
+
+        const $li2 = document.createElement('li');
+        $li2.textContent = '우유';
+
+        // $li2를 $drink.lastElementChild 앞에 삽입
+        $drink.insertBefore($li2, $drink.lastElementChild);
+        // $drink.insertBefore($li2,document.querySelector('pre'));
+    </script>
   
 
     <h3>노드 이동</h3>
@@ -32,6 +46,22 @@
         <li>파스타</li>
         <li>피자</li>
     </ul>
+
+    <script>
+        const $food = document.getElementById('food');
+
+        // firstElement = 공백이나 개행을 받지 않고 요소만 가져옴
+        const $pasta = $food.firstElementChild;
+
+        const $pizza = $food.lastElementChild;
+        // const [$pasta, $pizza] = $food.children;
+        
+        $drink.appendChild($pasta);
+
+        // 첫번째꺼를 두번째꺼 앞에다가 삽입하겠다. 
+        $drink.insertBefore($pizza, $pasta);
+
+    </script>
 
    
     
