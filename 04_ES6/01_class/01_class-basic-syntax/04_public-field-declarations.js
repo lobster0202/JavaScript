@@ -4,6 +4,7 @@ class Book {
 
     // 최신 브라우저(Chrome 72 이상) 또는 최신 Node.js(버전 12 이상)에서만 실행 가능하다.
 
+    /* 클래스 필드 */
     name = "모던 JavaScript";
     // this.price = 35000; // 문법 오류 : this.은 constructor 내부 또는 메소드 내부에서 작성해야 한다.
     price;

@@ -27,7 +27,6 @@ function makeTutee(message) {
         feedback() {
             console.log(message);
         };
-        
     };    
 }
 
