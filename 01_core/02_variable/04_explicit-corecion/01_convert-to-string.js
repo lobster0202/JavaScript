@@ -8,6 +8,8 @@ console.log(String(NaN));               // "NaN"
 console.log(String(Infinity));          // "Infinity"
 console.log(String(true));              // "true"
 
+console.log();
+
 //    2. Object.prototype.toString 메소드 사용
 console.log((10).toString());           // "10" 
 console.log((NaN).toString());          // "NaN"

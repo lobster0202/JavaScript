@@ -17,7 +17,7 @@ let Tutee = class MyTutee {
     }
 };
 
-/* MyTutee란느 것은 Tutee 내에서만 사용이 가능하다. */
+/* MyTutee라는 것은 Tutee 내에서만 사용이 가능하다. */
 new Tutee().learn();
 // console.log(MyTutee); // ReferenceError: MyTutee is not defined
 

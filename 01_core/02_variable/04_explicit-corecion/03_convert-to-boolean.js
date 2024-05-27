@@ -14,6 +14,8 @@ console.log(Boolean(undefined));
 console.log(Boolean({}));
 console.log(Boolean([]));
 
+console.log();
+
 // 2. 논리 부정 연산자 ! 를 2번 사용하는 방법
 console.log('논리 부정 연산자 ! 를 2번 사용하는 방법')
 console.log(!!'JavaScript');

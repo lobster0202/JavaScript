@@ -8,6 +8,9 @@ console.log(Number('10.01'));       // 10.01
 console.log(Number(true));          // 1
 console.log(Number(false));         // 0
 
+
+console.log();
+
 // 2. parseInt, parseFloat 함수 이용 (문자열 -> 숫자만 가능)
 console.log(parseInt('10'));        // 10
 console.log(parseFloat('10'));      // 10
@@ -16,6 +19,8 @@ console.log(parseFloat('3.12'));    // 3.12
 console.log(parseInt(true));        // NaN
 console.log(parseFloat(false));     //NaN
 
+
+console.log();
 
 // 3. + 단항 산술 연산자 이용 - 암묵적 형변환
 

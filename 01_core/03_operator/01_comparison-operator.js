@@ -11,6 +11,9 @@ console.log(`1 == 'true' : ${1 == 'true'}`);        // true
 console.log(`1 === '1' : ${1 === '1'}`);            // false
 console.log(`1 === 'true' : ${1 === 'true'}`);      // false
 
+
+console.log();
+
 console.log("====== 숫자 0과 빈 문자열 '', 문자 '0', false 비교 ==========")
 console.log(`0 == '0' : ${0 == '0'}`);              // true
 console.log(`0 == '' : ${0 == ''}`);                // true
